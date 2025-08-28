@@ -27,4 +27,159 @@
     }
     header h1 { margin: 0; font-size: 2rem; }
     nav {
-      position:
+      position: sticky;
+      top: 0;
+      background-color: var(--color-secundario);
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      z-index: 1000;
+    }
+    nav a {
+      color: var(--color-blanco);
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      font-weight: 500;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: var(--color-primario);
+    }
+    .imagenes {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+    .imagenes img {
+      width: 300px;
+      max-width: 90%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+    .imagenes img:hover {
+      transform: scale(1.05);
+    }
+    section {
+      margin: 1.5rem auto;
+      max-width: 720px;
+      background: var(--color-blanco);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 { color: var(--color-secundario); margin-top: 0; }
+    ul, ol {
+      padding-left: 1.2rem;
+    }
+    form {
+      margin-top: 1rem;
+    }
+    input, select, button {
+      width: 100%;
+      max-width: 300px;
+      margin: 0.5rem auto;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      display: block;
+      font-size: 1rem;
+    }
+    button {
+      background-color: var(--color-secundario);
+      color: var(--color-blanco);
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    button:hover {
+      background-color: var(--color-primario);
+    }
+    footer {
+      background-color: #ECEFF1;
+      color: #5D6D7E;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hospitality Management</h1>
+    <p>Inspirado en el estilo institucional y profesional de ESDAI – UP</p>
+  </header>
+
+  <nav>
+    <a href="#aprendizaje">Lo que aprendes</a>
+    <a href="#areas">Áreas de trabajo</a>
+    <a href="#importancia">Importancia</a>
+    <a href="#formulario">Formulario</a>
+  </nav>
+
+  <div class="imagenes">
+    <img src="hotel.jpg" alt="Imagen de hotel">
+    <img src="evento.jpg" alt="Imagen de un evento">
+  </div>
+
+  <main>
+    <section id="aprendizaje">
+      <h2>¿Qué aprende un estudiante?</h2>
+      <ul>
+        <li>Servicio al cliente y experiencia del huésped</li>
+        <li>Operación de hoteles y restaurantes</li>
+        <li>Marketing turístico y gestión de eventos</li>
+        <li>Finanzas y control de costos</li>
+        <li>Liderazgo de equipos multiculturales</li>
+      </ul>
+    </section>
+
+    <section id="areas">
+      <h2>Áreas de trabajo</h2>
+      <ol>
+        <li>Hotelería</li>
+        <li>Restaurantes y catering</li>
+        <li>Eventos y convenciones</li>
+        <li>Cruceros y aerolíneas</li>
+        <li>Turismo y destinos</li>
+      </ol>
+    </section>
+
+    <section id="importancia">
+      <h2>Importancia del Hospitality Management</h2>
+      <p>La hospitalidad impulsa el turismo, comercio y servicios a nivel global. Los profesionales garantizan experiencias excepcionales y gestionan recursos con eficiencia.</p>
+      <p>La tecnología (reservas online, marketing digital, análisis de datos) ha revolucionado el sector para personalizar servicios y optimizar operaciones.</p>
+      <p>La sostenibilidad y la inclusión son eje en empresas responsables con el entorno y la diversidad.</p>
+    </section>
+
+    <section id="formulario">
+      <h2>Mini formulario de práctica</h2>
+      <p>Simula una solicitud para un evento.</p>
+      <form>
+        <label>Nombre:<input type="text" name="nombre" required></label>
+        <label>Tipo de evento:
+          <select name="evento">
+            <option>Conferencia</option>
+            <option>Boda</option>
+            <option>Banquete</option>
+            <option>Reunión</option>
+          </select>
+        </label>
+        <label>Fecha:<input type="date" name="fecha"></label>
+        <label>Nº de personas:<input type="number" name="personas" min="1" max="500" value="50"></label>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hecho para practicar Hospitality Management con estilo institucional y profesional.</p>
+  </footer>
+</body>
+</html>
